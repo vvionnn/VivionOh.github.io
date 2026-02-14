@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legacy Garden | Vivion Oh</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo">&lt;/&gt;</div>
+          <div>Vivion</div>
+        </a>
+        <a class="btn primary" href="projects.html">Back</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="card pad">
+        <div class="kicker">Project</div>
+        <div class="h1">Legacy <span class="accent">Garden</span></div>
+        <p class="sub" style="max-width:90ch;">
+          A web-based platform designed to encourage meaningful interaction between seniors and youth through digital storytelling and shared activities.
+        </p>
+
+        <div class="pills">
+          <span class="pill">Role: Web Developer</span>
+          <span class="pill">Python • Flask • Jinja2</span>
+          <span class="pill">HTML • CSS • JavaScript</span>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="h1" style="font-size:26px; margin:0 0 10px;">Preview</div>
+        <div class="small">Click any screenshot to zoom.</div>
+        <div class="preview-row">
+          <img class="zoomable" src="images/legacy-1.png" alt="Legacy Garden — Home">
+          <img class="zoomable" src="images/legacy-2.png" alt="Legacy Garden — Story feature">
+          <img class="zoomable" src="images/legacy-3.png" alt="Legacy Garden — Reward feature">
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="h1" style="font-size:26px; margin:0 0 10px;">Key features</div>
+        <ul class="small">
+          <li>Story and memory sharing feature with structured user flows</li>
+          <li>Reward-based garden progression system for engagement</li>
+          <li>Database-backed storage and retrieval</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn primary" href="#">Code</a>
+          <a class="btn ghost" href="projects.html">All Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="zoomModal" aria-hidden="true">
+    <button class="modal-close" id="zoomClose" aria-label="Close">×</button>
+    <div class="modal-inner">
+      <img class="modal-img" id="zoomImg" alt="Zoomed preview">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
