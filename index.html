@@ -1,159 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vivion Oh | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="brand" href="#top">
-          <div class="logo">&lt;/&gt;</div>
-          <div>Vivion</div>
-        </a>
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Go to home">
+      <span class="brandIcon">&lt;/&gt;</span>
+      <span class="brandName">Vivion</span>
+    </a>
 
-        <button class="menu-btn" id="menuBtn">Menu</button>
+    <button class="menuBtn" id="menuBtn" aria-label="Open menu">
+      Menu <span class="plus">+</span>
+    </button>
+  </header>
 
-        <div class="nav-links" id="navLinks">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="#contact">Contact</a>
-          <a class="btn primary" href="projects.html">View Work</a>
-        </div>
+  <!-- Menu overlay -->
+  <div class="menuOverlay" id="menuOverlay" aria-hidden="true">
+    <div class="menuPanel">
+      <div class="menuHead">
+        <div class="menuTitle">Menu</div>
+        <button class="menuClose" id="menuClose" aria-label="Close menu">×</button>
+      </div>
+
+      <nav class="menuLinks">
+        <a href="#home" class="mLink">Home</a>
+        <a href="#projects" class="mLink">Projects</a>
+        <a href="#skills" class="mLink">Skills</a>
+        <a href="#contact" class="mLink">Get in Touch</a>
+      </nav>
+
+      <div class="menuMeta">
+        <div class="chip">Software Developer</div>
+        <div class="chip">UI/UX Designer</div>
+        <div class="chip">Web Developer</div>
       </div>
     </div>
   </div>
 
-  <div id="top" class="hero">
-    <div class="container">
-      <div class="hero-grid">
+  <!-- MAIN -->
+  <main class="snap">
 
-        <div class="card hero-card">
-          <div class="kicker">Aspiring <span class="accent">Software Developer</span></div>
+    <!-- HERO -->
+    <section id="home" class="section hero">
+      <div class="bgGlow"></div>
 
-          <div class="h1">
-            Building <span class="accent">clean</span> web experiences.
+      <div class="heroGrid">
+        <div class="heroLeft">
+          <div class="pill">
+            Aspiring <span class="gradText">Software Developer</span>
           </div>
 
-          <p class="sub">
-            I’m Vivion Oh — Year 1 Diploma in Business and Financial Technology (NYP).
-            I build user-focused web applications and front-end sites with clear flows and usable interfaces.
+          <h1 class="heroTitle">
+            Building <span class="gradText">clean</span><br/>
+            web experiences.
+          </h1>
+
+          <p class="heroSub">
+            I’m <b>Vivion Oh</b> — Software Developer • UI/UX Designer • Web Developer.
+            I specialise in building user-friendly interfaces and web applications with clear workflows.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn primary" href="projects.html">See Projects →</a>
-            <a class="btn ghost" href="legacy-garden.html">Featured: Legacy Garden</a>
-            <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <div class="heroBtns">
+            <a class="btn primary" href="#projects">View Projects →</a>
+            <a class="btn ghost" href="#contact">Get in Touch</a>
           </div>
 
-          <div class="hr"></div>
-
-          <div class="pills">
-            <span class="pill">Python • Flask</span>
-            <span class="pill">HTML • CSS • JavaScript</span>
-            <span class="pill">GitHub Pages</span>
-          </div>
-        </div>
-
-        <div class="card side-card">
-          <div class="mini">
-            <b>Focus</b>
-            <div class="small">Web development • usability • clear user workflows</div>
-          </div>
-
-          <div class="mini">
-            <b>Key work</b>
-            <div class="small">Legacy Garden — Story + Reward features</div>
-          </div>
-
-          <div class="mini">
-            <b>Now learning</b>
-            <div class="small">Better front-end structure • cleaner code • deployment</div>
-          </div>
-
-          <div class="pills">
-            <span class="pill">VP, Peer Supporter Club</span>
-            <span class="pill">IBM SkillsBuild</span>
+          <div class="miniRow">
+            <span class="miniTag">HTML</span>
+            <span class="miniTag">CSS</span>
+            <span class="miniTag">JavaScript</span>
+            <span class="miniTag">Flask</span>
+            <span class="miniTag">Jinja</span>
+            <span class="miniTag">Figma</span>
+            <span class="miniTag">GitHub</span>
           </div>
         </div>
 
+        <!-- right side: no photo for now -->
+        <div class="heroRight">
+          <div class="stackCard">
+            <div class="stackTitle">Current Focus</div>
+            <div class="stackText">Web development • usability • clear user workflows</div>
+          </div>
+
+          <div class="stackCard">
+            <div class="stackTitle">Key Work</div>
+            <div class="stackText">Legacy Garden — Story + Reward features</div>
+          </div>
+
+          <div class="stackCard">
+            <div class="stackTitle">Tools</div>
+            <div class="stackText">
+              GitHub • GitLab • Power BI • Figma • Microsoft Word/Excel/PowerPoint • Scratch
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div id="about" class="section">
-    <div class="container">
-      <div class="card pad">
-        <div class="h1" style="font-size:28px; margin:0 0 10px;">About</div>
-        <p class="sub" style="max-width:90ch;">
-          I enjoy building practical web features and presenting projects clearly for both technical and non-technical audiences.
-          I’m especially interested in projects that improve accessibility and user experience.
-        </p>
-      </div>
-    </div>
-  </div>
+      <div class="scrollHint">Scroll ↓</div>
+    </section>
 
-  <div id="skills" class="section">
-    <div class="container">
-      <div class="grid-2">
-        <div class="card pad">
-          <div class="h1" style="font-size:28px; margin:0 0 10px;">Skills</div>
-          <div class="skills-row">
-            <div class="skill">Python</div>
-            <div class="skill">Flask</div>
-            <div class="skill">Jinja2</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Bootstrap</div>
-            <div class="skill">Git / GitHub</div>
-          </div>
-        </div>
-
-        <div class="card pad">
-          <div class="h1" style="font-size:28px; margin:0 0 10px;">Featured</div>
-          <p class="sub">
-            Two projects that show my range: full-stack web application work and front-end interaction design.
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="sectionInner">
+        <div class="sectionTop">
+          <h2 class="sectionTitle">Projects</h2>
+          <p class="sectionSub">
+            A few projects that showcase web development, UI/UX thinking, and clear user flows.
+            Click any preview to zoom.
           </p>
-          <div class="actions">
-            <a class="btn primary" href="projects.html">All Projects</a>
-            <a class="btn ghost" href="legacy-garden.html">Legacy Garden</a>
-            <a class="btn ghost" href="dance-revolution.html">Dance Website</a>
+        </div>
+
+        <!-- TikTok-style round previews -->
+        <div class="bubbleRow">
+          <button class="bubble" data-open="legacy">
+            <span class="bubbleImg" style="background-image:url('images/legacy-1.png')"></span>
+            <span class="bubbleLabel">Legacy Garden</span>
+          </button>
+
+          <button class="bubble" data-open="dance">
+            <span class="bubbleImg" style="background-image:url('images/dance-1.png')"></span>
+            <span class="bubbleLabel">Dance Revolution</span>
+          </button>
+
+          <button class="bubble" data-open="nirvana">
+            <span class="bubbleImg" style="background-image:url('images/nirvana-1.png')"></span>
+            <span class="bubbleLabel">Nirvana (Figma)</span>
+          </button>
+        </div>
+
+        <!-- Project cards (clean, not too long) -->
+        <div class="projectGrid">
+
+          <!-- Legacy -->
+          <article class="pCard" id="legacy">
+            <div class="pHead">
+              <div>
+                <div class="pName">Legacy Garden</div>
+                <div class="pRole">Web Application • Full-stack (Academic)</div>
+              </div>
+              <div class="pTags">
+                <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Jinja</span>
+                <span class="tag">HTML/CSS/JS</span>
+              </div>
+            </div>
+
+            <p class="pDesc">
+              Platform to encourage meaningful interaction between seniors and youth through digital storytelling
+              and shared experiences.
+            </p>
+
+            <ul class="pBullets">
+              <li>Built story-sharing feature with clean user flows and database-backed storage.</li>
+              <li>Implemented reward-based garden progression to encourage engagement.</li>
+              <li>Integrated image moderation API for safer user-generated content.</li>
+            </ul>
+
+            <div class="shots">
+              <img class="shot zoomable" src="images/legacy-1.png" alt="Legacy Garden screenshot 1">
+              <img class="shot zoomable" src="images/legacy-2.png" alt="Legacy Garden screenshot 2">
+              <img class="shot zoomable" src="images/legacy-3.png" alt="Legacy Garden screenshot 3">
+            </div>
+          </article>
+
+          <!-- Dance -->
+          <article class="pCard" id="dance">
+            <div class="pHead">
+              <div>
+                <div class="pName">Dance Revolution</div>
+                <div class="pRole">Front-End Website • CCA Promotion</div>
+              </div>
+              <div class="pTags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+              </div>
+            </div>
+
+            <p class="pDesc">
+              Multi-page promotional site for a CCA with interactive sections and a clear sign-up flow.
+            </p>
+
+            <ul class="pBullets">
+              <li>Designed responsive pages with consistent layout and navigation.</li>
+              <li>Added interactive UI elements to improve engagement and clarity.</li>
+              <li>Built a multi-step registration flow with basic validation.</li>
+            </ul>
+
+            <div class="shots">
+              <img class="shot zoomable" src="images/dance-1.png" alt="Dance Revolution screenshot 1">
+              <img class="shot zoomable" src="images/dance-2.png" alt="Dance Revolution screenshot 2">
+              <img class="shot zoomable" src="images/dance-3.png" alt="Dance Revolution screenshot 3">
+            </div>
+          </article>
+
+          <!-- Nirvana -->
+          <article class="pCard" id="nirvana">
+            <div class="pHead">
+              <div>
+                <div class="pName">Nirvana Mobile (UI/UX – Figma)</div>
+                <div class="pRole">UI/UX Case • Service Improvement Concept</div>
+              </div>
+              <div class="pTags">
+                <span class="tag">Figma</span><span class="tag">UI/UX</span>
+              </div>
+            </div>
+
+            <p class="pDesc">
+              UI/UX concept to improve a service experience through a clearer online flow and interface.
+            </p>
+
+            <ul class="pBullets">
+              <li>Created key screens and user flow focusing on clarity and usability.</li>
+              <li>Improved information structure to reduce confusion and friction.</li>
+              <li>Designed consistent components for a clean, modern experience.</li>
+            </ul>
+
+            <div class="shots">
+              <img class="shot zoomable" src="images/nirvana-1.png" alt="Nirvana Figma screenshot 1">
+              <img class="shot zoomable" src="images/nirvana-2.png" alt="Nirvana Figma screenshot 2">
+              <img class="shot zoomable" src="images/nirvana-3.png" alt="Nirvana Figma screenshot 3">
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="sectionInner">
+        <div class="sectionTop">
+          <h2 class="sectionTitle">Skills & Tools</h2>
+          <p class="sectionSub">Quick overview of what I use most often.</p>
+        </div>
+
+        <div class="skillGrid">
+          <div class="skillCard">
+            <div class="skillTitle">Web</div>
+            <div class="skillList">HTML • CSS • JavaScript</div>
+          </div>
+          <div class="skillCard">
+            <div class="skillTitle">Backend</div>
+            <div class="skillList">Python • Flask • Jinja</div>
+          </div>
+          <div class="skillCard">
+            <div class="skillTitle">Design</div>
+            <div class="skillList">Figma • UI/UX</div>
+          </div>
+          <div class="skillCard">
+            <div class="skillTitle">Data / Tools</div>
+            <div class="skillList">Power BI • GitHub • GitLab</div>
+          </div>
+          <div class="skillCard">
+            <div class="skillTitle">Productivity</div>
+            <div class="skillList">Word • Excel • PowerPoint</div>
+          </div>
+          <div class="skillCard">
+            <div class="skillTitle">Other</div>
+            <div class="skillList">Scratch (prototype / simulation)</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="contact" class="section">
-    <div class="container">
-      <div class="card pad">
-        <div class="h1" style="font-size:28px; margin:0 0 10px;">Contact</div>
-        <p class="sub">Open to internships and learning opportunities.</p>
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="sectionInner">
+        <div class="contactCard">
+          <h2 class="sectionTitle">Get in Touch</h2>
+          <p class="sectionSub">Feel free to reach out for internships, collaborations, or project discussions.</p>
 
-        <div class="pills">
-          <span class="pill">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></span>
-          <span class="pill">GitHub: <a href="https://github.com/vvionnn" target="_blank" rel="noopener">vvionnn</a></span>
-          <span class="pill">LinkedIn: <a href="#" target="_blank" rel="noopener">Add link</a></span>
+          <div class="contactRow">
+            <a class="contactItem" href="mailto:youremail@example.com">
+              <span class="ciLabel">Email</span>
+              <span class="ciValue">youremail@example.com</span>
+            </a>
+            <a class="contactItem" href="https://github.com/vvionnn" target="_blank" rel="noopener">
+              <span class="ciLabel">GitHub</span>
+              <span class="ciValue">github.com/vvionnn</span>
+            </a>
+            <a class="contactItem" href="#" target="_blank" rel="noopener">
+              <span class="ciLabel">LinkedIn</span>
+              <span class="ciValue">Add your link</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer">
+          © <span id="year"></span> Vivion Oh • Portfolio on GitHub Pages
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="footer">
-    © <span id="year"></span> Vivion Oh • Built on GitHub Pages
-  </div>
+  </main>
 
   <!-- Zoom modal -->
-  <div class="modal" id="zoomModal" aria-hidden="true">
-    <button class="modal-close" id="zoomClose" aria-label="Close">×</button>
-    <div class="modal-inner">
-      <img class="modal-img" id="zoomImg" alt="Zoomed preview">
+  <div class="zoomModal" id="zoomModal" aria-hidden="true">
+    <button class="zoomClose" id="zoomClose" aria-label="Close">×</button>
+    <div class="zoomInner">
+      <img id="zoomImg" class="zoomImg" alt="Zoomed preview"/>
     </div>
   </div>
 
