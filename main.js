@@ -13,21 +13,11 @@ function closeMenu(){
 
 menuBtn?.addEventListener("click", openMenu);
 menuClose?.addEventListener("click", closeMenu);
-menuOverlay?.addEventListener("click", (e) => {
-  if (e.target === menuOverlay) closeMenu();
+menuOverlay?.addEventListener("click", (e)=>{
+  if(e.target === menuOverlay) closeMenu();
 });
-
 document.querySelectorAll(".mLink").forEach(a=>{
   a.addEventListener("click", ()=>closeMenu());
-});
-
-// Bubble jump to project card
-document.querySelectorAll(".bubble").forEach(b=>{
-  b.addEventListener("click", ()=>{
-    const id = b.getAttribute("data-open");
-    const el = document.getElementById(id);
-    if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
-  });
 });
 
 // Zoom modal
@@ -48,13 +38,13 @@ function closeZoom(){
 }
 
 zoomClose?.addEventListener("click", closeZoom);
-zoomModal?.addEventListener("click", (e)=>{ if(e.target === zoomModal) closeZoom(); });
-document.addEventListener("keydown",(e)=>{ if(e.key === "Escape") closeZoom(); });
+zoomModal?.addEventListener("click",(e)=>{ if(e.target===zoomModal) closeZoom(); });
+document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") closeZoom(); });
 
 document.querySelectorAll(".zoomable").forEach(img=>{
   img.addEventListener("click", ()=>openZoom(img.src, img.alt));
 });
 
-// Year
+// year
 const year = document.getElementById("year");
-if (year) year.textContent = new Date().getFullYear();
+if(year) year.textContent = new Date().getFullYear();
