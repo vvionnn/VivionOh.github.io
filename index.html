@@ -1,15 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vivion Oh | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Vivion Oh</h1>
-  <p>Aspiring Software Developer</p>
 
-  <p>
-    <a href="projects.html">View Projects</a>
-  </p>
+  <div class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <div class="logo">&lt;/&gt;</div>
+          <div>Vivion</div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">Menu</button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="#" id="openContact">Contact Me</a>
+          <a class="btn primary" href="#" id="openContact">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="top" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="card pad">
+          <div class="kicker">Aspiring <span class="pink">Software Developer</span></div>
+          <div class="h1">Hi, I’m <span class="pink">Vivion</span> Oh.</div>
+
+          <p class="sub">
+            Year 1 Diploma in Business & Financial Technology (NYP).
+            I build user-focused web applications and front-end websites with clean UI and clear flows.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="projects.html">View my work →</a>
+            <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+            <a class="btn ghost" href="https://github.com/vvionnn" target="_blank" rel="noopener">GitHub</a>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="pills">
+            <span class="pill">Flask • Python</span>
+            <span class="pill">HTML • CSS • JavaScript</span>
+            <span class="pill">GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="card profile-card">
+          <div class="profile-img">
+            <!-- Optional: put your photo in images/profile.jpg and uncomment the img below -->
+            <!-- <img src="images/profile.jpg" alt="Vivion Oh"> -->
+            <div>Profile Image</div>
+          </div>
+
+          <div class="meta">
+            <div><b>Key Project:</b> Legacy Garden (Story + Rewards)</div>
+            <div><b>Leadership:</b> VP, NYP Peer Supporter Club</div>
+            <div><b>Location:</b> Singapore</div>
+          </div>
+
+          <div class="pills">
+            <span class="pill">Director’s List Y1S1</span>
+            <span class="pill">IBM SkillsBuild</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <div class="container">
+      <div class="card pad">
+        <div class="h2">About</div>
+        <p class="sub" style="max-width:84ch;">
+          I’m interested in building accessible, user-friendly platforms that encourage meaningful interaction.
+          This portfolio highlights my academic projects, technical skills, and leadership experiences.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="skills" class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card pad">
+          <div class="h2">Skills</div>
+          <p class="sub">Tools I use in projects.</p>
+          <div class="skills-row">
+            <div class="skill">Python</div>
+            <div class="skill">Flask</div>
+            <div class="skill">Jinja2</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Git</div>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <div class="h2">Featured Projects</div>
+          <p class="sub">A quick view — full details in the Projects page.</p>
+
+          <div class="projects-grid" style="grid-template-columns:1fr; gap:12px;">
+            <div class="card project" style="box-shadow:none;">
+              <div class="ptitle">Legacy Garden</div>
+              <p class="pdesc">Full-stack web app (Flask) for digital storytelling + rewards.</p>
+              <div class="tags">
+                <span class="tag">Flask</span><span class="tag">Database</span>
+              </div>
+              <div class="actions">
+                <a class="btn primary" href="legacy-garden.html">View</a>
+                <a class="btn ghost" href="projects.html">All Projects</a>
+              </div>
+            </div>
+
+            <div class="card project" style="box-shadow:none;">
+              <div class="ptitle">Dance Revolution Website</div>
+              <p class="pdesc">Multi-page site with interactive event browsing + sign-up flow.</p>
+              <div class="tags">
+                <span class="tag">HTML</span><span class="tag">JavaScript</span>
+              </div>
+              <div class="actions">
+                <a class="btn primary" href="dance-revolution.html">View</a>
+                <a class="btn ghost" href="projects.html">All Projects</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> Vivion Oh • Built with GitHub Pages
+  </div>
+
+  <!-- Contact slide panel -->
+  <div class="overlay" id="overlay"></div>
+  <div class="contact-panel" id="contactPanel" aria-hidden="true">
+    <div class="panel-head">
+      <div>
+        <div class="h2" style="margin:0;">Get in Touch</div>
+        <div class="small">Open to internships and learning opportunities.</div>
+      </div>
+      <button class="panel-close" id="closePanel" aria-label="Close">×</button>
+    </div>
+
+    <div class="list">
+      <div class="item">
+        <b>Email</b>
+        <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </div>
+      <div class="item">
+        <b>GitHub</b>
+        <a href="https://github.com/vvionnn" target="_blank" rel="noopener">github.com/vvionnn</a>
+      </div>
+      <div class="item">
+        <b>LinkedIn</b>
+        <a href="#" target="_blank" rel="noopener">Add your link</a>
+      </div>
+      <div class="item">
+        <b>Resume</b>
+        <a href="resume.pdf" target="_blank" rel="noopener">Download / View PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zoom modal (global) -->
+  <div class="modal" id="zoomModal" aria-hidden="true">
+    <button class="modal-close" id="zoomClose" aria-label="Close">×</button>
+    <div class="modal-inner">
+      <img class="modal-img" id="zoomImg" alt="Zoomed preview">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
