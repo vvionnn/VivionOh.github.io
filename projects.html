@@ -1,20 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Vivion Oh</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Projects</h1>
 
-  <h2>Legacy Garden</h2>
-  <p>
-    Web development project using Flask, Python, HTML, CSS, and JavaScript.
-  </p>
+  <div class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="logo">&lt;/&gt;</div>
+          <div>Vivion</div>
+        </a>
+        <button class="menu-btn" id="menuBtn">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn primary" href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h2>Dance Revolution Website</h2>
-  <p>
-    Front-end promotional website built with HTML, CSS, and JavaScript.
-  </p>
+  <div class="section">
+    <div class="container">
+      <div class="card pad">
+        <div class="h1" style="font-size:28px; margin:0 0 10px;">Projects</div>
+        <p class="sub">Click “View Project” for details. Click images to zoom.</p>
+      </div>
+
+      <div style="height:14px;"></div>
+
+      <div class="projects-grid">
+
+        <div class="project">
+          <div class="thumb">
+            <img class="zoomable" src="images/legacy-1.png" alt="Legacy Garden preview"
+                 onerror="this.style.display='none'; this.parentElement.textContent='Legacy Garden';">
+          </div>
+          <div class="ptitle">Legacy Garden</div>
+          <p class="pdesc">Full-stack web app for digital storytelling and engagement.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Jinja2</span><span class="tag">Database</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="legacy-garden.html">View Project</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb">
+            <img class="zoomable" src="images/dance-1.png" alt="Dance Revolution preview"
+                 onerror="this.style.display='none'; this.parentElement.textContent='Dance Revolution';">
+          </div>
+          <div class="ptitle">Dance Revolution Website</div>
+          <p class="pdesc">Front-end site with interactive event browsing and sign-up flow.</p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="dance-revolution.html">View Project</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb">Coming Soon</div>
+          <div class="ptitle">More projects</div>
+          <p class="pdesc">Additional work and case studies will be added.</p>
+          <div class="tags">
+            <span class="tag">UI/UX</span><span class="tag">Figma</span>
+          </div>
+          <div class="actions">
+            <a class="btn ghost" href="index.html#contact">Request details</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Zoom modal -->
+  <div class="modal" id="zoomModal" aria-hidden="true">
+    <button class="modal-close" id="zoomClose" aria-label="Close">×</button>
+    <div class="modal-inner">
+      <img class="modal-img" id="zoomImg" alt="Zoomed preview">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
