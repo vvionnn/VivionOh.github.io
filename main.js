@@ -1,35 +1,21 @@
-// year
-const year = document.getElementById("year");
-if (year) year.textContent = new Date().getFullYear();
+// main.js
+// Small helpers: year + smooth scrolling that accounts for fixed navbar height
 
-// Zoom modal
-const zoomModal = document.getElementById("zoomModal");
-const zoomImg = document.getElementById("zoomImg");
-const zoomClose = document.getElementById("zoomClose");
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function openZoom(src, alt){
-  zoomModal.classList.add("open");
-  zoomImg.src = src;
-  zoomImg.alt = alt || "Zoomed preview";
-  document.body.style.overflow = "hidden";
-}
+// Offset anchor jump for fixed navbar
+const NAV_OFFSET = 84;
 
-function closeZoom(){
-  zoomModal.classList.remove("open");
-  zoomImg.src = "";
-  document.body.style.overflow = "";
-}
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", (e) => {
+    const href = a.getAttribute("href");
+    if (!href || href === "#") return;
 
-zoomClose?.addEventListener("click", closeZoom);
-zoomModal?.addEventListener("click", (e) => {
-  if (e.target === zoomModal) closeZoom();
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.pageYOffset - NAV_OFFSET;
+    window.scrollTo({ top, behavior: "smooth" });
+  });
 });
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeZoom();
-});
-
-document.querySelectorAll(".zoomable").forEach(img => {
-  img.addEventListener("click", () => openZoom(img.src, img.alt));
-});
-
