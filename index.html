@@ -1,113 +1,326 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nicole • Digital Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivion Oh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Draggable flower decorations -->
-  <div class="flower flower-left" id="flowerLeft" aria-hidden="true">🌸</div>
-  <div class="flower flower-right" id="flowerRight" aria-hidden="true">🌼</div>
 
-  <!-- Navbar -->
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="#home">Nicole</a>
+  <!-- NAVBAR (no hamburger) -->
+  <header class="navbar" role="banner">
+    <div class="navInner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <span class="brandIcon">&lt;/&gt;</span>
+        <span class="brandText">Vivion</span>
+      </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="#home" class="navLink">Home</a>
+        <a href="#about" class="navLink">About</a>
+        <a href="#projects" class="navLink">Projects</a>
+        <a href="#skills" class="navLink">Skills</a>
+        <a href="#contact" class="navLink">Contact</a>
+      </nav>
 
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#demo">Video Demo</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+      <a class="navCta" href="#projects">View Work</a>
+    </div>
   </header>
 
-  <main class="container">
-    <!-- HOME -->
-    <section id="home" class="section hero">
-      <h1>Hi, I’m Nicole 👋</h1>
-      <p class="subtitle">
-        Business Development Engineer • SIT • Digital Portfolio
-      </p>
+  <!-- HERO (TikTok style) -->
+  <main id="home" class="hero">
 
-      <div class="hero-card">
-        <p>
-          Welcome to my portfolio. Here you’ll find my projects, skills, and a short walkthrough video.
-        </p>
-        <div class="quick-actions">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn btn-ghost" href="#demo">Watch Demo</a>
+    <!-- Animated blobs / flower -->
+    <div class="blobLayer" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="blob b4"></div>
+    </div>
+
+    <!-- soft vignette -->
+    <div class="vignette" aria-hidden="true"></div>
+
+    <section class="heroContent">
+      <!-- LEFT BIG NAME -->
+      <div class="heroLeft">
+        <div class="heroName">
+          <div class="nameTop">VIVION</div>
+          <div class="nameBottom">OH</div>
+        </div>
+
+        <div class="heroMeta">
+          <p class="metaLine">
+            Software Developer • UI/UX Designer • Web Developer
+          </p>
+          <p class="metaLine muted">
+            Building user-focused web applications and interfaces with clear workflows.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in Touch</a>
+          </div>
+
+          <div class="pillRow">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Python</span>
+            <span class="pill">Flask</span>
+            <span class="pill">Figma</span>
+          </div>
         </div>
       </div>
 
-      <p class="hint">✨ You can drag the flowers around.</p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Project Title 1</h3>
-          <p>Short description of what you built and what tools you used.</p>
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Project Title 2</h3>
-          <p>Short description of what you built and what tools you used.</p>
-          <div class="tags">
-            <span>Python</span><span>Flask</span><span>SQL</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- VIDEO DEMO -->
-    <section id="demo" class="section">
-      <h2>Video Demo</h2>
-      <p class="subtext">Walkthrough of my project (embedded from Google Drive).</p>
-
-      <!-- Replace the src with your /preview link -->
-      <div class="video-wrap">
-        <iframe
-          src="https://drive.google.com/file/d/1EquOR-XBm2mORFzDsLOHzB1nbfDX1_iH/preview"
-          allow="autoplay"
-          allowfullscreen
-          title="Project Demo Video">
-        </iframe>
+      <!-- RIGHT BIG ROLE -->
+      <div class="heroRight">
+        <div class="heroRole">
+          <div class="roleTop">SOFTWARE</div>
+          <div class="roleBottom">DEVELOPER</div>
+        </div>
       </div>
 
-      <p class="tiny">
-        If it shows a permission error: Google Drive → Share → “Anyone with the link” (Viewer).
-      </p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
-        <p>LinkedIn: <a href="#" target="_blank" rel="noreferrer">Your LinkedIn</a></p>
-        <p>GitHub: <a href="#" target="_blank" rel="noreferrer">Your GitHub</a></p>
-      </div>
+      <div class="scrollHint">SCROLL</div>
     </section>
   </main>
 
-  <footer class="footer">
-    <small>© <span id="year"></span> Nicole • Built on GitHub Pages</small>
-  </footer>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2 class="sectionTitle">About</h2>
 
-  <script src="script.js"></script>
+      <div class="glassCard">
+        <p class="aboutText">
+          I’m <b>Vivion Oh</b>, a Year 1 Diploma in Business and Financial Technology (NYP) student.
+          I enjoy building clean, usable web experiences and improving user workflows through
+          thoughtful UI design and clear implementation.
+        </p>
+        <div class="aboutMini">
+          <div class="miniCard">
+            <div class="miniTitle">Focus</div>
+            <div class="miniText">Web development • usability • clear user flows</div>
+          </div>
+          <div class="miniCard">
+            <div class="miniTitle">Key work</div>
+            <div class="miniText">Legacy Garden — Story + Reward features</div>
+          </div>
+          <div class="miniCard">
+            <div class="miniTitle">Now learning</div>
+            <div class="miniText">Better structure • cleaner code • deployment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <h2 class="sectionTitle">Projects</h2>
+      <p class="sectionSub">Replace images/videos later. Keep the layout now.</p>
+
+      <!-- Project 1 -->
+      <article class="proj">
+        <div class="projHead">
+          <div>
+            <div class="projTitle">Legacy Garden</div>
+            <div class="projSub">Web App • Seniors × Youth digital storytelling</div>
+          </div>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Jinja</span>
+            <span class="tag">Content Moderation API</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li>Built story-sharing flows to support meaningful intergenerational interaction.</li>
+          <li>Implemented reward-based progression to encourage participation and continued use.</li>
+          <li>Integrated moderation checks for safer user-generated content.</li>
+        </ul>
+
+        <!-- 3 media cards (put videos or images) -->
+        <div class="mediaGrid">
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/legacy-1.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Legacy Garden — Story demo</div>
+          </div>
+
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/legacy-2.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Legacy Garden — Community / feed</div>
+          </div>
+
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/legacy-3.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Legacy Garden — Reward garden</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="proj">
+        <div class="projHead">
+          <div>
+            <div class="projTitle">Dance Revolution</div>
+            <div class="projSub">Front-end website • CCA promotion & sign-up flow</div>
+          </div>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li>Created a multi-page site to showcase CCA events and achievements.</li>
+          <li>Added interactive UI elements (filtering/counters/sections) to improve engagement.</li>
+          <li>Built a sign-up flow with validation and user feedback.</li>
+        </ul>
+
+        <div class="mediaGrid">
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/dance-1.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Dance Revolution — Home</div>
+          </div>
+
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/dance-2.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Dance Revolution — Events</div>
+          </div>
+
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/dance-3.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Dance Revolution — Sign-up</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="proj">
+        <div class="projHead">
+          <div>
+            <div class="projTitle">Nirvana Mobile (UI/UX – Figma)</div>
+            <div class="projSub">UI/UX concept • service flow improvement</div>
+          </div>
+          <div class="tags">
+            <span class="tag">Figma</span><span class="tag">UI/UX</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li>Designed clearer screens and improved information hierarchy to reduce friction.</li>
+          <li>Created consistent components for a cleaner, modern interface.</li>
+          <li>Documented before/after flow improvements for usability.</li>
+        </ul>
+
+        <div class="mediaGrid">
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/nirvana-1.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Nirvana — Flow overview</div>
+          </div>
+
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/nirvana-2.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Nirvana — Key screens</div>
+          </div>
+
+          <div class="mediaCard">
+            <video controls preload="metadata" class="mediaVid">
+              <source src="videos/nirvana-3.mp4" type="video/mp4" />
+            </video>
+            <div class="mediaCap">Nirvana — UI components</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <h2 class="sectionTitle">Skills</h2>
+      <p class="sectionSub">Tools & platforms used across coursework and projects.</p>
+
+      <div class="skillGrid">
+        <div class="skillCard">
+          <div class="skillTitle">Web</div>
+          <div class="skillLine">HTML • CSS • JavaScript</div>
+        </div>
+        <div class="skillCard">
+          <div class="skillTitle">Backend</div>
+          <div class="skillLine">Python • Flask • Jinja</div>
+        </div>
+        <div class="skillCard">
+          <div class="skillTitle">Design</div>
+          <div class="skillLine">Figma • UI/UX</div>
+        </div>
+        <div class="skillCard">
+          <div class="skillTitle">Tools</div>
+          <div class="skillLine">GitHub • GitLab • Power BI</div>
+        </div>
+        <div class="skillCard">
+          <div class="skillTitle">Productivity</div>
+          <div class="skillLine">Word • Excel • PowerPoint</div>
+        </div>
+        <div class="skillCard">
+          <div class="skillTitle">Other</div>
+          <div class="skillLine">Scratch (prototype/simulation)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="contactCard">
+        <h2 class="sectionTitle">Get in Touch</h2>
+        <p class="sectionSub">Internships • collaborations • project discussions</p>
+
+        <div class="contactGrid">
+          <a class="contactItem" href="mailto:vivionoh@gmail.com">
+            <div class="cLabel">Email</div>
+            <div class="cValue">vivionoh@gmail.com</div>
+          </a>
+
+          <a class="contactItem" target="_blank" rel="noopener" href="https://github.com/vvionnn">
+            <div class="cLabel">GitHub</div>
+            <div class="cValue">github.com/vvionnn</div>
+          </a>
+
+          <a class="contactItem" target="_blank" rel="noopener"
+             href="https://www.linkedin.com/in/vivion-oh-6b0153307">
+            <div class="cLabel">LinkedIn</div>
+            <div class="cValue">linkedin.com/in/vivion-oh</div>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        © <span id="year"></span> Vivion Oh
+      </footer>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
 </body>
 </html>
