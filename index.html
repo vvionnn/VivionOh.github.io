@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,7 @@
   <title>Vivion Oh | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- NAVBAR (no hamburger) -->
@@ -30,7 +30,7 @@
 
   <!-- HERO -->
   <main id="home" class="hero">
-    <!-- animated “flower/blobs” -->
+
     <div class="flowerLayer" aria-hidden="true">
       <div class="flower f1"></div>
       <div class="flower f2"></div>
@@ -58,13 +58,6 @@
             <a class="cta primary" href="#projects">View Projects</a>
             <a class="cta ghost" href="#contact">Get in Touch</a>
           </div>
-
-          <div class="pillRow" aria-label="Quick skills">
-            <span class="pill">HTML • CSS • JavaScript</span>
-            <span class="pill">Python • Flask • Jinja</span>
-            <span class="pill">Figma • UI/UX</span>
-            <span class="pill">GitHub Pages</span>
-          </div>
         </div>
       </div>
 
@@ -83,11 +76,9 @@
   <section id="projects" class="section">
     <div class="wrap">
       <h2 class="sectionTitle">Projects</h2>
-      <p class="sectionSub">Each project includes a short explanation + 3 demo clips.</p>
+      <p class="sectionSub">Project demos (videos) + short write-up.</p>
 
-      <!-- ========================= -->
-      <!-- Project 1: Legacy Garden -->
-      <!-- ========================= -->
+      <!-- Project 1 -->
       <article class="proj">
         <div class="projHead">
           <div>
@@ -95,83 +86,53 @@
             <div class="projSub">Web App • Seniors × Youth digital storytelling</div>
           </div>
           <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Python</span>
-            <span class="tag">Flask</span>
-            <span class="tag">Jinja</span>
-            <span class="tag">Image Moderation API</span>
-          </div>
-        </div>
-
-        <div class="projExplain">
-          <div class="exCard">
-            <div class="exLabel">Problem</div>
-            <div class="exValue">Intergenerational interaction is weakening; seniors face loneliness and youth have fewer chances to build empathy through meaningful exchanges.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">Goal</div>
-            <div class="exValue">Design an accessible, enjoyable platform for ongoing interaction through shared stories and simple collaborative activities.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">My Contribution</div>
-            <div class="exValue">Implemented story creation/management and reward progression features; integrated moderation + improved usability flows.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">Key Features</div>
-            <div class="exValue">Story posting, edits, safe uploads via moderation, and reward-based progression to encourage continued participation.</div>
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Jinja</span>
+            <span class="tag">Image moderation API</span>
           </div>
         </div>
 
         <ul class="bullets">
-          <li>Built structured story-sharing flows to support meaningful senior–youth engagement.</li>
-          <li>Implemented reward-based progression to encourage repeat participation and sustained use.</li>
-          <li>Integrated image moderation API to support safer user-generated content.</li>
+          <li>Built story-sharing flows that encourage meaningful intergenerational interaction.</li>
+          <li>Implemented reward-based progression to motivate participation and continued use.</li>
+          <li>Integrated image moderation to support safer user-generated content.</li>
         </ul>
 
-        <!-- 3 VIDEOS (replace VIDEO_ID_2/3 when ready) -->
-        <div class="videoGrid">
+        <!-- 3 VIDEO CARDS (Google Drive embed preview) -->
+        <div class="shots">
+          <!-- Video 1 (your provided ID) -->
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/9nqRPUktQVE"
-              title="Legacy Garden Demo 1"
+              src="https://drive.google.com/file/d/1EquOR-XBm2mORFzDsLOHzB1nbfDX1_iH/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Legacy Garden demo 1"
+            ></iframe>
           </div>
 
+          <!-- Video 2 (replace FILE_ID_2) -->
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_2"
-              title="Legacy Garden Demo 2"
+              src="https://drive.google.com/file/d/FILE_ID_2/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Legacy Garden demo 2"
+            ></iframe>
           </div>
 
+          <!-- Video 3 (replace FILE_ID_3) -->
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_3"
-              title="Legacy Garden Demo 3"
+              src="https://drive.google.com/file/d/FILE_ID_3/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Legacy Garden demo 3"
+            ></iframe>
           </div>
         </div>
-
-        <p class="smallNote">Tip: Replace <span class="mono">VIDEO_ID_2</span> and <span class="mono">VIDEO_ID_3</span> with your YouTube IDs (the part after <span class="mono">youtu.be/</span>).</p>
       </article>
 
-      <!-- =========================== -->
-      <!-- Project 2: Dance Revolution -->
-      <!-- =========================== -->
+      <!-- Project 2 -->
       <article class="proj">
         <div class="projHead">
           <div>
@@ -179,153 +140,92 @@
             <div class="projSub">Front-end website • CCA promotion & sign-up flow</div>
           </div>
           <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-
-        <div class="projExplain">
-          <div class="exCard">
-            <div class="exLabel">Problem</div>
-            <div class="exValue">CCA information is often scattered; students need a clear overview of events, achievements, and how to join.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">Goal</div>
-            <div class="exValue">Create a clean promotional site with a guided sign-up experience that is easy to navigate on desktop and mobile.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">My Contribution</div>
-            <div class="exValue">Designed the multi-page layout and implemented interactive sections + validation for the sign-up flow.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">Key Features</div>
-            <div class="exValue">Events page, achievements section, interactive UI, and a multi-step sign-up with feedback for users.</div>
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
           </div>
         </div>
 
         <ul class="bullets">
-          <li>Designed a multi-page interface to showcase CCA information, events, and achievements.</li>
-          <li>Implemented interactive UI elements to improve navigation and engagement.</li>
-          <li>Built a sign-up flow with validation and user feedback to guide registration.</li>
+          <li>Designed a multi-page CCA website with consistent navigation and layout.</li>
+          <li>Added interactive UI elements to improve engagement and readability.</li>
+          <li>Implemented a sign-up flow with input validation and user feedback.</li>
         </ul>
 
-        <!-- 3 VIDEOS -->
-        <div class="videoGrid">
+        <div class="shots">
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/DANCE_VIDEO_ID_1"
-              title="Dance Revolution Demo 1"
+              src="https://drive.google.com/file/d/VIDEO_ID_A/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Dance Revolution demo 1"
+            ></iframe>
           </div>
 
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/DANCE_VIDEO_ID_2"
-              title="Dance Revolution Demo 2"
+              src="https://drive.google.com/file/d/VIDEO_ID_B/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Dance Revolution demo 2"
+            ></iframe>
           </div>
 
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/DANCE_VIDEO_ID_3"
-              title="Dance Revolution Demo 3"
+              src="https://drive.google.com/file/d/VIDEO_ID_C/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Dance Revolution demo 3"
+            ></iframe>
           </div>
         </div>
-
-        <p class="smallNote">Paste your 3 Dance Revolution YouTube IDs into <span class="mono">DANCE_VIDEO_ID_1/2/3</span>.</p>
       </article>
 
-      <!-- =============================== -->
-      <!-- Project 3: Nirvana Mobile (UI/UX) -->
-      <!-- =============================== -->
+      <!-- Project 3 -->
       <article class="proj">
         <div class="projHead">
           <div>
             <div class="projTitle">Nirvana Mobile (UI/UX – Figma)</div>
-            <div class="projSub">UI/UX concept • Service flow improvement</div>
+            <div class="projSub">UI/UX concept • service flow improvement</div>
           </div>
           <div class="tags">
-            <span class="tag">Figma</span>
-            <span class="tag">UI/UX</span>
-          </div>
-        </div>
-
-        <div class="projExplain">
-          <div class="exCard">
-            <div class="exLabel">Problem</div>
-            <div class="exValue">Service flows can be confusing; users need clearer steps, better information hierarchy, and faster decision-making.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">Goal</div>
-            <div class="exValue">Design an improved mobile experience with clearer navigation and consistent components to reduce friction.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">My Contribution</div>
-            <div class="exValue">Created key screens, refined user journey, and standardized UI components for a cleaner interface.</div>
-          </div>
-          <div class="exCard">
-            <div class="exLabel">Key Deliverables</div>
-            <div class="exValue">High-fidelity mockups, improved layout hierarchy, and a more intuitive end-to-end flow.</div>
+            <span class="tag">Figma</span><span class="tag">UI/UX</span>
           </div>
         </div>
 
         <ul class="bullets">
-          <li>Designed key screens and a clearer user journey to reduce friction in the service flow.</li>
-          <li>Improved information hierarchy for readability and faster decision-making.</li>
-          <li>Built consistent UI components for a modern, cohesive interface.</li>
+          <li>Redesigned key screens and refined user flow to reduce friction in service journey.</li>
+          <li>Improved information hierarchy and layout consistency for readability.</li>
+          <li>Created reusable UI patterns to support a cleaner, modern interface.</li>
         </ul>
 
-        <!-- 3 VIDEOS (Figma walkthrough clips) -->
-        <div class="videoGrid">
+        <div class="shots">
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/NIRVANA_VIDEO_ID_1"
-              title="Nirvana Mobile Demo 1"
+              src="https://drive.google.com/file/d/FIGMA_VIDEO_1/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Nirvana Mobile demo 1"
+            ></iframe>
           </div>
 
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/NIRVANA_VIDEO_ID_2"
-              title="Nirvana Mobile Demo 2"
+              src="https://drive.google.com/file/d/FIGMA_VIDEO_2/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Nirvana Mobile demo 2"
+            ></iframe>
           </div>
 
           <div class="videoCard">
             <iframe
-              src="https://www.youtube.com/embed/NIRVANA_VIDEO_ID_3"
-              title="Nirvana Mobile Demo 3"
+              src="https://drive.google.com/file/d/FIGMA_VIDEO_3/preview"
+              allow="autoplay"
               loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
+              title="Nirvana Mobile demo 3"
+            ></iframe>
           </div>
         </div>
-
-        <p class="smallNote">Paste your 3 Nirvana (Figma walkthrough) YouTube IDs into <span class="mono">NIRVANA_VIDEO_ID_1/2/3</span>.</p>
       </article>
 
     </div>
@@ -338,30 +238,12 @@
       <p class="sectionSub">Tools & platforms used across projects and coursework.</p>
 
       <div class="skillGrid">
-        <div class="skillCard">
-          <div class="skillTitle">Web</div>
-          <div class="skillLine">HTML • CSS • JavaScript</div>
-        </div>
-        <div class="skillCard">
-          <div class="skillTitle">Backend</div>
-          <div class="skillLine">Python • Flask • Jinja</div>
-        </div>
-        <div class="skillCard">
-          <div class="skillTitle">Design</div>
-          <div class="skillLine">Figma • UI/UX</div>
-        </div>
-        <div class="skillCard">
-          <div class="skillTitle">Tools</div>
-          <div class="skillLine">GitHub • GitLab • Power BI</div>
-        </div>
-        <div class="skillCard">
-          <div class="skillTitle">Productivity</div>
-          <div class="skillLine">Word • Excel • PowerPoint</div>
-        </div>
-        <div class="skillCard">
-          <div class="skillTitle">Other</div>
-          <div class="skillLine">Scratch (prototype/simulation)</div>
-        </div>
+        <div class="skillCard"><div class="skillTitle">Web</div><div class="skillLine">HTML • CSS • JavaScript</div></div>
+        <div class="skillCard"><div class="skillTitle">Backend</div><div class="skillLine">Python • Flask • Jinja</div></div>
+        <div class="skillCard"><div class="skillTitle">Design</div><div class="skillLine">Figma • UI/UX</div></div>
+        <div class="skillCard"><div class="skillTitle">Tools</div><div class="skillLine">GitHub • GitLab • Power BI</div></div>
+        <div class="skillCard"><div class="skillTitle">Productivity</div><div class="skillLine">Word • Excel • PowerPoint</div></div>
+        <div class="skillCard"><div class="skillTitle">Other</div><div class="skillLine">Scratch (prototype/simulation)</div></div>
       </div>
     </div>
   </section>
@@ -378,15 +260,13 @@
             <div class="cLabel">Email</div>
             <div class="cValue">vivionoh@gmail.com</div>
           </a>
-
           <a class="contactItem" target="_blank" rel="noopener" href="https://github.com/vvionnn">
             <div class="cLabel">GitHub</div>
             <div class="cValue">github.com/vvionnn</div>
           </a>
-
-          <a class="contactItem" target="_blank" rel="noopener" href="https://www.linkedin.com/in/vivion-oh-6b0153307/">
+          <a class="contactItem" target="_blank" rel="noopener" href="https://www.linkedin.com/in/vivion-oh-6b0153307">
             <div class="cLabel">LinkedIn</div>
-            <div class="cValue">linkedin.com/in/vivion-oh</div>
+            <div class="cValue">vivion-oh-6b0153307</div>
           </a>
         </div>
       </div>
