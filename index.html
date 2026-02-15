@@ -8,51 +8,35 @@
 </head>
 <body>
 
-  <!-- top right menu like the video -->
-  <header class="topbar">
-    <div class="topbar-left"></div>
-    <button class="menuBtn" id="menuBtn" aria-label="Open menu">
-      <span>Menu</span><span class="plus">+</span>
-    </button>
-  </header>
+  <!-- NAVBAR (no hamburger) -->
+  <header class="navbar" role="banner">
+    <div class="navInner">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span class="brandDot"></span>
+        <span class="brandText">Vivion</span>
+      </a>
 
-  <!-- overlay menu -->
-  <aside class="menuOverlay" id="menuOverlay" aria-hidden="true">
-    <div class="menuPanel">
-      <div class="menuHead">
-        <div class="menuTitle">Menu</div>
-        <button class="menuClose" id="menuClose" aria-label="Close menu">×</button>
-      </div>
-
-      <nav class="menuLinks">
-        <a href="#home" class="mLink">Home</a>
-        <a href="#projects" class="mLink">Projects</a>
-        <a href="#skills" class="mLink">Skills</a>
-        <a href="#contact" class="mLink">Get in touch</a>
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="#home" class="navLink">Home</a>
+        <a href="#projects" class="navLink">Projects</a>
+        <a href="#skills" class="navLink">Skills</a>
+        <a href="#contact" class="navLink">Contact</a>
       </nav>
 
-      <div class="menuFooter">
-        <div class="miniChips">
-          <span class="chip">Software Developer</span>
-          <span class="chip">UI/UX Designer</span>
-          <span class="chip">Web Developer</span>
-        </div>
-      </div>
+      <a class="navCta" href="#projects">View Work</a>
     </div>
-  </aside>
+  </header>
 
-  <!-- HERO (video style: left name, right role, flower animation background) -->
+  <!-- HERO (left/right big text + animated blobs) -->
   <main id="home" class="hero">
 
-    <!-- animated flowers -->
+    <!-- animated “flower/blobs” -->
     <div class="flowerLayer" aria-hidden="true">
       <div class="flower f1"></div>
       <div class="flower f2"></div>
       <div class="flower f3"></div>
       <div class="flower f4"></div>
     </div>
-
-    <!-- dark vignette like the video -->
     <div class="vignette" aria-hidden="true"></div>
 
     <section class="heroContent">
@@ -60,6 +44,20 @@
         <div class="nameBlock">
           <div class="nameTop">VIVION</div>
           <div class="nameBottom">OH</div>
+        </div>
+
+        <div class="heroMeta">
+          <p class="metaLine">
+            Software Developer • UI/UX Designer • Web Developer
+          </p>
+          <p class="metaLine muted">
+            Building user-focused web applications and interfaces with clear workflows.
+          </p>
+
+          <div class="heroCtas">
+            <a class="cta primary" href="#projects">View Projects</a>
+            <a class="cta ghost" href="#contact">Get in Touch</a>
+          </div>
         </div>
       </div>
 
@@ -70,22 +68,7 @@
         </div>
       </div>
 
-      <!-- small intro text (keep subtle like the video) -->
-      <div class="heroMeta">
-        <p class="metaLine">
-          Software Developer • UI/UX Designer • Web Developer
-        </p>
-        <p class="metaLine muted">
-          Building user-focused web applications and interfaces with clear workflows.
-        </p>
-
-        <div class="heroCtas">
-          <a class="cta primary" href="#projects">View Projects</a>
-          <a class="cta ghost" href="#contact">Get in Touch</a>
-        </div>
-      </div>
-
-      <div class="scrollHint">Scroll</div>
+      <div class="scrollHint">SCROLL</div>
     </section>
   </main>
 
@@ -93,9 +76,7 @@
   <section id="projects" class="section">
     <div class="wrap">
       <h2 class="sectionTitle">Projects</h2>
-      <p class="sectionSub">
-        Click screenshots to zoom.
-      </p>
+      <p class="sectionSub">Click screenshots to zoom. Videos are optional.</p>
 
       <!-- Project 1 -->
       <article class="proj">
@@ -122,6 +103,16 @@
           <img class="shot zoomable" src="images/legacy-2.png" alt="Legacy Garden screenshot 2">
           <img class="shot zoomable" src="images/legacy-3.png" alt="Legacy Garden screenshot 3">
         </div>
+
+        <!-- OPTIONAL VIDEO (remove if you don't have it yet) -->
+        <div class="mediaRow">
+          <div class="videoWrap">
+            <video class="projVideo" controls preload="metadata" poster="images/legacy-1.png">
+              <source src="videos/legacy-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </article>
 
       <!-- Project 2 -->
@@ -146,6 +137,16 @@
           <img class="shot zoomable" src="images/dance-1.png" alt="Dance Revolution screenshot 1">
           <img class="shot zoomable" src="images/dance-2.png" alt="Dance Revolution screenshot 2">
           <img class="shot zoomable" src="images/dance-3.png" alt="Dance Revolution screenshot 3">
+        </div>
+
+        <!-- OPTIONAL VIDEO -->
+        <div class="mediaRow">
+          <div class="videoWrap">
+            <video class="projVideo" controls preload="metadata" poster="images/dance-1.png">
+              <source src="videos/dance-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </article>
 
@@ -172,7 +173,18 @@
           <img class="shot zoomable" src="images/nirvana-2.png" alt="Nirvana screenshot 2">
           <img class="shot zoomable" src="images/nirvana-3.png" alt="Nirvana screenshot 3">
         </div>
+
+        <!-- OPTIONAL VIDEO -->
+        <div class="mediaRow">
+          <div class="videoWrap">
+            <video class="projVideo" controls preload="metadata" poster="images/nirvana-1.png">
+              <source src="videos/nirvana-demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </article>
+
     </div>
   </section>
 
@@ -180,6 +192,8 @@
   <section id="skills" class="section">
     <div class="wrap">
       <h2 class="sectionTitle">Skills</h2>
+      <p class="sectionSub">Tools & platforms I’ve used across projects and coursework.</p>
+
       <div class="skillGrid">
         <div class="skillCard">
           <div class="skillTitle">Web</div>
@@ -209,7 +223,7 @@
     </div>
   </section>
 
-  <!-- CONTACT (skip services as requested) -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="wrap">
       <div class="contactCard">
