@@ -1,66 +1,60 @@
-// Year
-document.getElementById("year").textContent = new Date().getFullYear();
+const menuBtn = document.getElementById("menuBtn");
+const menuOverlay = document.getElementById("menuOverlay");
+const menuClose = document.getElementById("menuClose");
 
-// Mobile nav toggle
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
+function openMenu(){
+  menuOverlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeMenu(){
+  menuOverlay.classList.remove("open");
+  document.body.style.overflow = "";
+}
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("show");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+menuBtn?.addEventListener("click", openMenu);
+menuClose?.addEventListener("click", closeMenu);
+menuOverlay?.addEventListener("click", (e) => {
+  if (e.target === menuOverlay) closeMenu();
 });
 
-// Close menu when clicking a link (mobile)
-navLinks.querySelectorAll("a").forEach(a => {
-  a.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-    navToggle.setAttribute("aria-expanded", "false");
+document.querySelectorAll(".mLink").forEach(a=>{
+  a.addEventListener("click", ()=>closeMenu());
+});
+
+// Bubble jump to project card
+document.querySelectorAll(".bubble").forEach(b=>{
+  b.addEventListener("click", ()=>{
+    const id = b.getAttribute("data-open");
+    const el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:"smooth", block:"start"});
   });
 });
 
-// Draggable flowers (works mouse + touch)
-function makeDraggable(el) {
-  let dragging = false;
-  let offsetX = 0;
-  let offsetY = 0;
+// Zoom modal
+const zoomModal = document.getElementById("zoomModal");
+const zoomImg = document.getElementById("zoomImg");
+const zoomClose = document.getElementById("zoomClose");
 
-  const start = (e) => {
-    dragging = true;
-    const p = getPoint(e);
-    const rect = el.getBoundingClientRect();
-    offsetX = p.x - rect.left;
-    offsetY = p.y - rect.top;
-    el.setPointerCapture?.(e.pointerId);
-  };
-
-  const move = (e) => {
-    if (!dragging) return;
-    const p = getPoint(e);
-
-    // keep within viewport
-    const x = clamp(p.x - offsetX, 0, window.innerWidth - el.offsetWidth);
-    const y = clamp(p.y - offsetY, 0, window.innerHeight - el.offsetHeight);
-
-    el.style.left = x + "px";
-    el.style.top = y + "px";
-    el.style.right = "auto"; // important if it was right-aligned originally
-  };
-
-  const end = () => { dragging = false; };
-
-  el.addEventListener("pointerdown", start);
-  window.addEventListener("pointermove", move);
-  window.addEventListener("pointerup", end);
+function openZoom(src, alt){
+  zoomModal.classList.add("open");
+  zoomImg.src = src;
+  zoomImg.alt = alt || "Zoomed preview";
+  document.body.style.overflow = "hidden";
+}
+function closeZoom(){
+  zoomModal.classList.remove("open");
+  zoomImg.src = "";
+  document.body.style.overflow = "";
 }
 
-function getPoint(e) {
-  return { x: e.clientX, y: e.clientY };
-}
+zoomClose?.addEventListener("click", closeZoom);
+zoomModal?.addEventListener("click", (e)=>{ if(e.target === zoomModal) closeZoom(); });
+document.addEventListener("keydown",(e)=>{ if(e.key === "Escape") closeZoom(); });
 
-function clamp(v, min, max) {
-  return Math.max(min, Math.min(max, v));
-}
+document.querySelectorAll(".zoomable").forEach(img=>{
+  img.addEventListener("click", ()=>openZoom(img.src, img.alt));
+});
 
-makeDraggable(document.getElementById("flowerLeft"));
-makeDraggable(document.getElementById("flowerRight"));
-
+// Year
+const year = document.getElementById("year");
+if (year) year.textContent = new Date().getFullYear();
